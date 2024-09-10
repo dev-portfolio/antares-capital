@@ -19,7 +19,7 @@
 
 :root { 
   --background-color: #00000078; /* Background color for the entire website, including individual sections */
-  --default-color:  #444444; /* Default color used for the majority of the text content across the entire website */
+  --default-color:  #4478bb; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #1b1b1b; /* Color for headings, subheadings and title throughout the website */
   --accent-color:#3e75b9; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -144,7 +144,7 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 0;
+  /* padding: 15px 0; */
   transition: all 0.5s;
   z-index: 997;
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
@@ -579,6 +579,56 @@ h6 {
   position: relative;
 }
 
+.about-bg {
+	background-image: url("../img/about.jpg");
+	background-size: 100%;
+}
+
+.contact-bg {
+	background-image: url("../img/contact.webp");
+	background-size: 100%;
+}
+
+.property-bg {
+	background-image: url("../img/property.webp");
+	background-size: 100% 100%;
+}
+
+.commercial-bg {
+	background-image: url("../img/commercial-banner.webp");
+	background-size: 100% 100%;
+}
+
+.search-bg {
+	background-image: url("../img/prop-search.png");
+	background-size: 100% 100%;
+}
+
+.property-s {
+	background-image: url("../img/property-s.jpg");
+	background-size: 100% 100%;
+}
+
+.property-s .heading {
+    padding: 350px 0 80px 0 !important;
+}
+
+.search-bg .heading {
+    padding: 350px 0 80px 0 !important;
+}
+
+.management .heading {
+    padding: 250px 0 80px 0 !important;
+}
+
+.commercial-bg .heading {
+    padding:350px 0 80px 0 !important;
+}
+
+.contact-bg .heading {
+    padding: 350px 0 80px 0 !important;
+}	
+
 .page-title .heading {
   padding: 160px 0 80px 0;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -587,12 +637,20 @@ h6 {
 .page-title .heading h1 {
   font-size: 38px;
   font-weight: 700;
-  color: white;
-	
+  color: white;	
+}
+
+.page-title .heading p {
+  font-size: 20px;
+  color: white;	
+}
+
+.breadcrumbs a {
+	color: #b9e0ff;	
 }
 
 .page-title nav {
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  background-color: color-mix(in srgb, var(--default-color), transparent 35%);
   padding: 20px 0;
 }
 
@@ -607,13 +665,14 @@ h6 {
 
 .page-title nav ol li+li {
   padding-left: 10px;
+  color: white;
 }
 
 .page-title nav ol li+li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 70%); */
 }
 
 /*--------------------------------------------------------------
@@ -621,7 +680,7 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: var(--default-color);
+  color: black;
   background-color: #ffffff;
   padding: 60px 0;
   scroll-margin-top: 90px;
@@ -810,7 +869,7 @@ section,
 .services .service-item {
   background-color: var(--surface-color);
   box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
-  padding: 60px 30px;
+  padding: 40px 30px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
   border-bottom: 5px solid var(--surface-color);
@@ -841,7 +900,7 @@ section,
 
 .services .service-item p {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 0;
 }
 
@@ -1088,6 +1147,10 @@ section,
   border-radius: 10px;
 }
 
+.about .approach {
+  font-size: 18px;
+}
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
@@ -1095,6 +1158,7 @@ section,
   background-color: var(--surface-color);
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
   padding: 30px;
+  border-radius: 20px;
 }
 
 .stats .stats-item i {
@@ -1134,6 +1198,7 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  border-radius: 20px;
 }
 
 .features h3 {
@@ -1144,19 +1209,19 @@ section,
   position: relative;
 }
 
-.features h3:after {
-  content: "";
-  background: var(--accent-color);
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  left: 0;
-  bottom: 0;
-}
+/* .features h3:after { */
+  /* content: ""; */
+  /* background: var(--accent-color); */
+  /* position: absolute; */
+  /* display: block; */
+  /* width: 50px; */
+  /* height: 3px; */
+  /* left: 0; */
+  /* bottom: 0; */
+/* } */
 
 .features .icon-box {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .features .icon-box i {
@@ -1199,6 +1264,14 @@ section,
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+}
+
+.features .result p {
+  font-size: 18px;
+}
+
+.features .result li span {
+  font-size: 18px;
 }
 
 /*--------------------------------------------------------------
@@ -1308,6 +1381,12 @@ section,
   margin-bottom: 20px;
 }
 
+.service-details .manage {
+	width: 100%;
+	height: 50%;
+}
+
+
 .service-details h3 {
   font-size: 26px;
   font-weight: 700;
@@ -1333,6 +1412,22 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
+}
+
+.investment .page-title {
+    background: url(../img/investment-banner.jpg) 50% 100%;
+}
+
+.transaction .page-title {
+    background: url(../img/transactions-banner.jpg) 50% 100%;
+}
+
+.consulting .page-title {
+    background: url(../img/consulting-banner.jpg) 50% 50%;
+}
+
+.management .page-title {
+    background: url(../img/management-banner.jpeg) 50% 50%;
 }
 
 /*--------------------------------------------------------------
