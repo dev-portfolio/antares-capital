@@ -154,10 +154,7 @@ h6 {
   line-height: 1;
 }
 
-.header .logo img {
-  max-width: 12%;
-  margin-right: 8px;
-}
+
 
 .header .logo h1 {
   font-size: 30px;
@@ -175,6 +172,11 @@ h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 @media (min-width: 1200px) {
+   .header .logo img {
+	 max-width: 12%;
+	 margin-right: 8px;
+  }
+
   .navmenu {
     padding: 0;
   }
@@ -308,6 +310,12 @@ h6 {
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
+	
+  .header .logo img {
+	 max-width: 43%;
+	 margin-right: 8px;
+  }
+
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -581,7 +589,7 @@ h6 {
 
 .about-bg {
 	background-image: url("../img/about.jpg");
-	background-size: 100%;
+	background-size: 100% 100%	;
 }
 
 .contact-bg {
